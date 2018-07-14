@@ -1,0 +1,40 @@
+﻿<Window x:Class="FootballWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootballWpfApp"
+        mc:Ignorable="d"
+        Title="Fifa Football 2018" Height="450" Width="900" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="344*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtTitle" Text="The name of the team with smallest difference between 'For' and 'Against' goals is " FontSize="16" VerticalAlignment="Center" Margin="10,0,0,0" Grid.Column="0"/>
+            <TextBlock x:Name="txtDiff" Text="" FontStyle="Italic" FontSize="16" VerticalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" FontWeight="Bold"/>
+        </Grid>
+
+        <DataGrid x:Name="dgFootballGrid" Margin="10" Grid.Row="1" GridLinesVisibility="Horizontal" AutoGenerateColumns="False" CanUserAddRows="false">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Number" Binding="{Binding Number}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="150" ></DataGridTextColumn>
+                <DataGridTextColumn Header="P" Binding="{Binding P}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="W" Binding="{Binding W}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="L" Binding="{Binding L}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="D" Binding="{Binding D}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="For" Binding="{Binding For}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="-" Binding="{Binding Dash}" Width="25" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Against" Binding="{Binding Against}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Points" Binding="{Binding Points}" Width="75" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Difference" Binding="{Binding Diff}" Width="*" ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
