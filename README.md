@@ -6,3 +6,5 @@ Football 2018 WPF application
 3. File path is given in `app.config` file
 4. Proper exception handling is implemented.
 5. User `data grid` to show the data in  UI 
+
+![image](https://user-images.githubusercontent.com/34414643/42724985-50d31538-879a-11e8-9b96-578fa831b9a3.png)
